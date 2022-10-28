@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="Pong_Game">
+		<CBX_INST_ENTRY INSTANCE_NAME="|Pong_Game|lpm_divide:Div0" CBX_FILE_NAME="lpm_divide_7so.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Pong_Game|lpm_divide:Div1" CBX_FILE_NAME="lpm_divide_7so.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Pong_Game|lpm_divide:Mod0" CBX_FILE_NAME="lpm_divide_qlo.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Pong_Game|lpm_divide:Mod1" CBX_FILE_NAME="lpm_divide_qlo.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

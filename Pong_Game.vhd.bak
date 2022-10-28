@@ -1,0 +1,50 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_arith.all;
+use ieee.std_logic_unsigned.all;
+
+entity Pong_Game is
+	port(	clk50_in : in std_logic;
+			redout : out std_logic_vector(9 downto 0);
+			blueout : out std_logic_vector(9 downto 0);
+			greenout : out std_logic_vector(9 downto 0);
+			vs_out : out std_logic;
+			hs_out : out std_logic;
+			sync : out std_logic;
+			clk25_out : std_logic);
+end Pong_Game;
+
+architecture behavioral of Pong_Game is
+signal clk25 : std_logic;
+signal horizontal_count : std_logic_vector(9 downto 0);
+signal vertical_count : std_logic_vector(9 downto 0);
+begin
+clk25_out <= clk25;
+sync <= '0';
+
+process (clk50_in)
+begin
+	if clk50_in'event and clk50_in='1' then
+		if (clk25 = '0') then
+			clk25 <= '1';
+		else
+			clk25 <= '0';
+		end if;
+	end if;
+end process;
+
+process (clk25)
+begin
+	if clk25'event and clk25 = '1' then
+		redout <= "0000000000";
+		greenout <= "0000000000";
+		blueout <= "1111111111";
+	else
+		redout <= "0000000000";
+		greenout <= "0000000000";
+		blueout <= "0000000000";
+	end if;
+	vs_out <= '1';
+	hs_out <= '1';
+end process;
+end behavioral;
